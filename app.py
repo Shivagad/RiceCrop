@@ -36,8 +36,8 @@ st.write("### इंग्रजी & मराठी | मजकूर & आव
 load_dotenv()
 
 # Load API Key
-# API_KEY = os.getenv("GEMINI_API_KEY")
-API_KEY ="AIzaSyDa8cZqhlkBU7xBdJCUiHft2dPV-pkCjLY"
+API_KEY = os.getenv("GEMINI_API_KEY")
+# API_KEY ="AIzaSyDa8cZqhlkBU7xBdJCUiHft2dPV-pkCjLY"
 genai.configure(api_key=API_KEY)
 
 # Select model
@@ -67,8 +67,8 @@ def transcribe_audio(file_path):
     return response.text
 
 # ---------------- AUDIO UPLOAD ----------------
-# st.write("### 🎤 आवाज अपलोड करा / Upload your voice (optional)")
-# uploaded_audio = st.file_uploader("Choose an audio file (wav, mp3)", type=["wav", "mp3"])
+st.write("### 🎤 आवाज अपलोड करा / Upload your voice (optional)")
+uploaded_audio = st.file_uploader("Choose an audio file (wav, mp3)", type=["wav", "mp3"])
 
 # ---------------- HANDLE QUERY ----------------
 if st.button("🌾 उत्तर मिळवा / Get Answer"):
